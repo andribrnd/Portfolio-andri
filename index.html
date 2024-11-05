@@ -16,6 +16,54 @@
     </style>
   </head>
   <body>
+    <!-- Header Star -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-lg text-primary block py-6"
+              >Andribrnd</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span class="hamburger-line duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line duration-300 ease-in-out"></span>
+              <span class="hamburger-line duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg-max-w-full">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
+                </li>
+                <li class="group">
+                  <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                </li>
+                <li class="group">
+                  <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Clients</a>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
     <!-- Hero Section Start -->
     <section id="home" class="pt-36">
       <div class="container">
@@ -127,24 +175,25 @@
     </section>
     <!-- About Secton End-->
 
+    <!-- Portfolio -->
+    <section id="Portfolio" class="pt-36 pb-32">
+      <div class="container">
+        <div clas="flex flex-wrap">
+          <div class="w-full px-4 mb-10">
+            <h4 class="font-bold text-primary text-lg mb-3">
+              Great Idea
+            </h4>
+            <h2 class="font bold text-dark text-3xl mb-5 max-w-md">
+              Portfolio
+            </h2>
+            <p class="font-medium text-base text-secondary max-w-xl">
+              Portfolio yang baik adalah dikerjain
+            </p>
+          </div>
+          <!-- About Section Start -->
+
     <!-- JS Animated Start -->
-    <script>
-      const phrases = ["Graphic Design", "UI Design", "Creative Visual"];
-      let currentPhraseIndex = 0;
-
-      function changeText() {
-        const animatedTextElement = document.querySelector(".animated-text");
-        animatedTextElement.classList.add("hidden");
-
-        setTimeout(() => {
-          animatedTextElement.textContent = phrases[currentPhraseIndex];
-          animatedTextElement.classList.remove("hidden");
-          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-        }, 500);
-      }
-
-      setInterval(changeText, 3000);
-    </script>
+    <script src="dist/js/script.js"></script>
     <!-- JS Animated end -->
   </body>
 </html>
