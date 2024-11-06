@@ -6,7 +6,7 @@ window.onscroll = function () {
   if (window.pageYOffset > fixedNav) {
     header.classList.add("navbar-fixed");
   } else {
-    header.classlist.remove("navbar-fixed");
+    header.classList.remove("navbar-fixed");
   }
 };
 
@@ -15,8 +15,10 @@ const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
 
 hamburger.addEventListener("click", function () {
-  hamburger.classList.toggle("hamburger-active");
-  navMenu.classList.toggle("hidden");
+  if (window.innerWidth < 1024) {
+    hamburger.classList.toggle("hamburger-active");
+    navmenu.classList.toggle("hidden");
+  }
 });
 
 // Animated Text
