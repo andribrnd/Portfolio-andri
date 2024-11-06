@@ -17,7 +17,7 @@ const navMenu = document.querySelector("#nav-menu");
 hamburger.addEventListener("click", function () {
   if (window.innerWidth < 1024) {
     hamburger.classList.toggle("hamburger-active");
-    navmenu.classList.toggle("hidden");
+    navMenu.classList.toggle("hidden");
   }
 });
 
