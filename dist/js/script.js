@@ -20,20 +20,3 @@ hamburger.addEventListener("click", function () {
     navMenu.classList.toggle("hidden");
   }
 });
-
-// Animated Text
-const phrases = ["Graphic Design", "UI Design", "Creative Visual"];
-let currentPhraseIndex = 0;
-
-function changeText() {
-  const animatedTextElement = document.querySelector(".animated-text");
-  animatedTextElement.classList.add("hidden");
-
-  setTimeout(() => {
-    animatedTextElement.textContent = phrases[currentPhraseIndex];
-    animatedTextElement.classList.remove("hidden");
-    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-  }, 500);
-}
-
-setInterval(changeText, 3000);
